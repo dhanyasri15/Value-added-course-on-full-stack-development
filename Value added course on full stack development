@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Full Stack Web Development Course</title>
+
+<style>
+body{
+    margin:0;
+    font-family:Arial,sans-serif;
+    background:#0e1020;
+    color:white;
+}
+
+header{
+    background:#0a0c19;
+    padding:15px;
+    text-align:center;
+}
+
+nav{
+    margin-top:10px;
+}
+
+nav a{
+    color:#35d0ba;
+    text-decoration:none;
+    margin:10px;
+    font-weight:bold;
+}
+
+nav a:hover{
+    color:#ffb454;
+}
+
+.page{
+    display:none;
+    padding:20px;
+}
+
+.active{
+    display:block;
+}
+
+section{
+    background:#171a30;
+    padding:20px;
+    border-radius:10px;
+    margin:15px;
+}
+
+.button{
+    background:#ffb454;
+    color:black;
+    padding:10px 15px;
+    text-decoration:none;
+    border-radius:5px;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+table,th,td{
+    border:1px solid white;
+}
+
+th,td{
+    padding:10px;
+}
+
+input,select,textarea{
+    width:100%;
+    padding:8px;
+    margin-top:5px;
+    margin-bottom:10px;
+}
+
+button{
+    padding:10px;
+    background:#ffb454;
+    border:none;
+    cursor:pointer;
+}
+
+footer{
+    text-align:center;
+    padding:15px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>Full Stack Web Development Course</h1>
+<p>Value Added Course | SRM TRP Engineering College</p>
+
+<nav>
+<a href="#" onclick="showPage('home')">Home</a>
+<a href="#" onclick="showPage('about')">About</a>
+<a href="#" onclick="showPage('courses')">Courses</a>
+<a href="#" onclick="showPage('register')">Register</a>
+<a href="#" onclick="showPage('contact')">Contact</a>
+</nav>
+</header>
+
+<!-- Home -->
+<div id="home" class="page active">
+<section>
+<h2>Build Websites From First Tag To Final Page</h2>
+
+<p>
+A 50 Hour Practical Course On Full Stack Web Development
+For B.E Students.
+</p>
+
+<button onclick="showPage('register')">
+Join Now
+</button>
+
+<button onclick="showPage('courses')">
+View Modules
+</button>
+</section>
+
+<section>
+<h2>What You Will Learn</h2>
+
+<ul>
+<li>HTML5</li>
+<li>CSS</li>
+<li>JavaScript</li>
+<li>Hosting</li>
+</ul>
+</section>
+</div>
+
+<!-- About -->
+<div id="about" class="page">
+<section>
+<h2>About Course</h2>
+
+<p>
+Full Stack Web Development Covers Planning,
+Designing, Developing And Hosting Websites.
+</p>
+
+<h3>Objectives</h3>
+
+<ol>
+<li>Understand Browser, DNS And Server</li>
+<li>Create Web Pages Using HTML</li>
+<li>Style Pages Using CSS</li>
+<li>Create Forms</li>
+</ol>
+</section>
+</div>
+
+<!-- Courses -->
+<div id="courses" class="page">
+<section>
+
+<h2>Course Modules</h2>
+
+<table>
+
+<tr>
+<th>Module</th>
+<th>Topic</th>
+<th>Hours</th>
+</tr>
+
+<tr>
+<td>1</td>
+<td>HTML5</td>
+<td>10</td>
+</tr>
+
+<tr>
+<td>2</td>
+<td>CSS3</td>
+<td>10</td>
+</tr>
+
+<tr>
+<td>3</td>
+<td>JavaScript</td>
+<td>12</td>
+</tr>
+
+<tr>
+<td>4</td>
+<td>Hosting</td>
+<td>12</td>
+</tr>
+
+<tr>
+<td>5</td>
+<td>Mini Project</td>
+<td>6</td>
+</tr>
+
+</table>
+
+</section>
+</div>
+
+<!-- Register -->
+<div id="register" class="page">
+<section>
+
+<h2>Registration Form</h2>
+
+<form>
+
+<label>Name</label>
+<input type="text" required>
+
+<label>Email</label>
+<input type="email" required>
+
+<label>Mobile Number</label>
+<input type="tel" required>
+
+<label>Date Of Birth</label>
+<input type="date">
+
+<label>Year Of Study</label>
+<select>
+<option>First Year</option>
+<option>Second Year</option>
+<option>Third Year</option>
+<option>Fourth Year</option>
+</select>
+
+<label>Comments</label>
+<textarea rows="4"></textarea>
+
+<button type="submit">
+Submit
+</button>
+
+<button type="reset">
+Clear
+</button>
+
+</form>
+
+</section>
+</div>
+
+<!-- Contact -->
+<div id="contact" class="page">
+<section>
+
+<h2>Contact Us</h2>
+
+<p>
+Course Coordinator<br>
+Department Of CSE<br>
+SRM TRP Engineering College
+</p>
+
+<p>
+Email :
+fullstack.course@example.com
+</p>
+
+<p>
+Phone :
++91 9876543210
+</p>
+
+<p>
+Office Hours :
+Monday To Friday
+10:00 AM To 12:30 PM
+</p>
+
+</section>
+</div>
+
+<footer>
+<p>
+SRM TRP Engineering College
+</p>
+</footer>
+
+<script>
+function showPage(pageId){
+
+let pages=document.querySelectorAll('.page');
+
+pages.forEach(function(page){
+page.classList.remove('active');
+});
+
+document.getElementById(pageId).classList.add('active');
+}
+</script>
+
+</body>
+</html>
